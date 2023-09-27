@@ -1,0 +1,11 @@
+# Fizz Buzz
+<$                        # take fstInt
+  .                       #   map
+    !                     #     zipWith
+      ,~                  #       range 0..
+      !                   #       zipWith
+        ^~"""""Fizz"      #         repeat ["", "", "Fizz"]
+        ^~"""""""""Buzz"  #         repeat ["", "", "", "", "Buzz"]
+        :                 #       stringAppend
+    ,                     #     makeTuple
+  ?,@$$                   #     if nullString? number else string
